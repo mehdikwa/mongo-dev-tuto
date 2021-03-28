@@ -1,8 +1,5 @@
 .idea/
 node_modules/
-dist/
 *.iml
 .env
-deploy/dist/
-deploy/node_modules/
 .DS_Store

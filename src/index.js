@@ -59,12 +59,34 @@ const writeData = async (datasource, docs) => {
 
     const bulkOperation = collection.initializeUnorderedBulkOp();
 
+    /**
+     *
+     * create and insert in new collection
+     * await collection.insertMany(docs)
+     *
+      */
+
+    /**
+     *
+     * update bulk of documents
+     * await collection.updateMany()
+     *
+     */
+
+    /**
+     *
+     * find and update bulk of ducments
+     *
+     */
     docs.forEach(doc => {
       bulkOperation
         .find({
           _id: doc._id
         })
-        .upsert()
+        .upsert({
+          _id: doc._id,
+          social_fiscal_2013: doc.nombre_de_menages
+        })
         .replaceOne({
           _id: doc._id,
           social_fiscal_2013: doc.nombre_de_menages
