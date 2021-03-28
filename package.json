@@ -1,0 +1,17 @@
+{
+  "name": "mongo-insee-dev",
+  "keywords": [],
+  "version": "0.0.0",
+  "author": "Mehdi Merabti",
+  "main": "src/index.js",
+  "engines": {
+    "node": "10"
+  },
+  "dependencies": {
+    "mongodb": "3.5.9",
+    "lodash": "4.17.20"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node src/**/*.js"
+  }
+}
